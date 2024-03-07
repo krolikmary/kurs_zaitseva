@@ -1,0 +1,45 @@
+:root{
+    --dark_theme_background-color: #25274D;
+    --light_theme_background-color: #AAABB8;
+    --blocks-color: #464866c4;
+    /* rgb(223 222 222 / 77%) */
+}
+
+@font-face {
+    font-family: comfortaa;
+    src: url(./fonts/comfortaa.ttf);
+}
+
+*{
+    font-family: comfortaa;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+header{
+    height: calc(7% - 10px);
+    width: calc(100vw - 20px);
+    padding: 10px 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+img{
+    height: 100%;
+    stroke: black;
+}
+
+a{
+    margin: 5px 20px;
+}
+
+.header_button{
+    margin: 5px 20px;
+    background: none;
+    padding: 0;
+    border: 0;
+}
