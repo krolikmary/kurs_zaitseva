@@ -1,0 +1,152 @@
+.conteiner, .level_selection{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.conteiner{
+    height: 94%;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.title, .user{
+    padding: 20px 40px;
+    margin: 20px;
+    background: var(--blocks-color);
+    border-radius: 20pt;
+    font-family: inherit;
+    font-size: 16pt;
+    z-index: 10;
+}
+
+.user{
+    font-size: 12pt;
+}
+
+.wrap_menu{
+    display: flex;
+    flex-direction: column;
+    width: clamp(250px, 30%, 900px);
+    margin: 10px;
+    z-index: 10;
+}
+
+.menu_item{
+    width: calc(100% - 10px);
+    height: 10vh;
+    margin: 5px;
+    border-radius: 20pt;
+    border: 0;
+    text-align: center;
+    background: var(--blocks-color);
+    color: inherit;
+    font-size: 14pt;
+    box-shadow: 0 5px 10px #464866;
+}
+
+button.menu_item:hover{
+    background: #595b7c;
+}
+
+button{
+    cursor: pointer;
+}
+
+input{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+input::-webkit-input-placeholder{
+    color: inherit;
+    opacity: 70%;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.shaked{
+    animation: horizontal_shaking 1s forwards;
+}
+
+@keyframes horizontal_shaking {
+    0% { transform: translateX(0) }
+    10% { transform: translateX(5px) }
+    20% { transform: translateX(-5px) }
+    30% { transform: translateX(10px) }
+    40% { transform: translateX(-10px) }
+    50% { transform: translateX(10px) }
+    60% { transform: translateX(-10px) }
+    70% { transform: translateX(10px) }
+    80% { transform: translateX(-5px) }
+    90% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+/* level selection */
+.level_selection{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 80%;
+    overflow: scroll;
+    z-index: 10;
+}
+
+.level{
+    width: clamp(220px, 20%, 500px);
+    height: 20vh;
+    margin: 7px;
+    border-radius: 20pt;
+    border: 0;
+    background: var(--blocks-color);
+    color: inherit;
+    font-size: 14pt;
+    box-shadow: 0 5px 10px rgb(82 82 82);
+}
+
+button.level:hover{
+    background: #595b7c65;
+}
+
+.locked{
+    background: rgba(61, 61, 61, 0.77);
+}
+
+.wraper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.scroll_stats{
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.281) transparent;
+    z-index: 10;
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    height: 0;
+    width: 10px;
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.281);
+    border: 3px solid transparent;
+}
+
+
